@@ -4,9 +4,9 @@
 Read Me
 -----------
 
-#Explaining the Application
+# Explaining the Application
 
-This website,<hurlyburly.github.io/Comedy-GIFS/index.html>, will pull a specified amounts of gifs related to the user search from the GIPHY API.  
+This website, <hurlyburly.github.io/Comedy-GIFS/index.html> , will pull a specified amounts of gifs related to the user search from the GIPHY API.  
 
 The theme is set to comedy shows and movies.  
 
@@ -16,7 +16,7 @@ The theme is set to comedy shows and movies.
 + Brooklyn 99
 + Psych
 
-#Powered By:
+# Powered By:
 + Bootstrap
 + jQuery
 + GIPHY API
