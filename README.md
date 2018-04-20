@@ -6,7 +6,7 @@ Read Me
 
 # Explaining the Application
 
-This website, <hurlyburly.github.io/Comedy-GIFS/index.html> , will pull a specified amounts of gifs related to the user search from the GIPHY API.  
+This website, <https://hurlyburly.github.io/Comedy-GIFS/> , will pull a specified amounts of gifs related to the user search from the GIPHY API.  
 
 The theme is set to comedy shows and movies.  
 
