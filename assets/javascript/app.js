@@ -21,17 +21,14 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var topics = ["the office","parks and recreation","brooklyn 99","psych"];
+var topics = ["the office", "parks and recreation", "brooklyn 99", "psych"];
 $(document).ready(function() {
   $("#clear-GIFs").on("click", function(event) {
     //clear gifs on page and buttons created
-
   });
 
   $(".get-GIFs").on("click", function() {
-
     var search = $(this).data("search");
-    console.log(search);
     var apiKey = "8ZCbydXTYkPNLN7AffE0dj7uiERD5sZZ";
     var limit = $(".gif-amount").val();
     var queryURL =
@@ -41,39 +38,42 @@ $(document).ready(function() {
       apiKey +
       "&limit=" +
       limit;
-    console.log(queryURL);
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      console.log(queryURL);
+      //callback
       var gifList = response.data;
 
       for (i = 0; i < limit; i++) {
         var rated = "rating:" + gifList[i].rating;
         var gifStill = gifList[i].images.fixed_height_still.url;
         var gifAnimated = gifList[i].images.fixed_height.url;
-
+        //prepend the gifs for the topics button pressed
         $(".main-feed").prepend(
           `<div class=GIFs>
           <h4>${rated}</h2>
           <img src=${gifStill} data-still=${gifStill} data-animated=${gifAnimated} data-state="still">
           
           </div>`
+          
         );
-var $img = $(this);
+      }
+      $("img").on("click", function() {
+        //Clicking the image will change the src from the still image source to the animated image source or vice versa, depending on the data state.
         var state = $(this).attr("data-state");
+        //assigning a variable with this format ($) to reduce the amount of "this" in the code and increase readability while also making it clear that this is changing something dynamically
+        var $img = $(this);
         
         if (state == "still") {
-        //   var animatedImg = $img.attr("data-animate");
-
-          $img.attr({ src: gifAnimated, "data-state": "animate" });
+          var animatedImg = $img.attr("data-animated");
+          $img.attr({ "src": animatedImg, "data-state": "animate" });
+          
         } else {
-        //   var stillImg = $img.attr("data-still");
-
-          $img.attr({ src: gifStill, "data-state": "still" });
+          var stillImg = $img.attr("data-still");
+          $img.attr({ "src": stillImg, "data-state": "still" });
         }
-      }
+      });
     });
   });
 });
