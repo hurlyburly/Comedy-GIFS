@@ -29,23 +29,23 @@ $(document).ready(function() {
 
   $(".gif-button").on("click",function(event){
     event.preventDefault();
-    var newButton=$(".search-GIF").val();
+    var button=$(".search-GIF").val();
     
-    topics.push(newButton);
+    topics.push(button);
     console.log(topics);
-
+    var newButton=topics[topics.length-1];
       $(".button-area").append(
     `
-     <h4>${}</h2>
-   
-    
-    </div>`
-    
+     <button type="button" class="btn btn-info get-GIFs" data-search=${newButton} data-state="still" >${newButton}</button>
+    `
+
    );
+   console.log(newButton);
+   console.log(topics);
   })
   
 
-  $(".get-GIFs").on("click", function() {
+  $(".button-area").on("click",".get-GIFs", function() {
     var search = $(this).data("search");
     var apiKey = "8ZCbydXTYkPNLN7AffE0dj7uiERD5sZZ";
     var limit = $(".gif-amount").val();
