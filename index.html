@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">   
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 </head>
@@ -30,49 +30,49 @@
                                     <option>15</option>
                                 </select>
                             </div>
-                            <div class="form-group">                            
-                            <button type="submit" class="btn btn-info" id="get-GIFs">Submit</button>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info" id="gif-buttons">Submit</button>
                             </div>
-                        </form>
-                        <br>
-                        <div class="col-md-12">
-                            <button type="button" class="btn btn-info">The Office</button>
-                            <button type="button" class="btn btn-info">Parks and Recreation</button>
-                            <button type="button" class="btn btn-info">Brookyn 99</button>
-                            <button type="button" class="btn btn-info">Psych</button>
-                        </div>
+                            <div class="form-group">
+                            <button type="submit" class="btn btn-secondary" id="clear-GIFs">Clear</button>
+                            </div>
+                    </div>
+                    </form>
+                    <br>
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-info get-GIFs" data-search="the office" data-state="still">The Office</button>
+                        <button type="button" class="btn btn-info get-GIFs" data-search="parks and recreation" data-state="still">Parks and Recreation</button>
+                        <button type="button" class="btn btn-info get-GIFs"data-search="brooklyn 99" data-state="still">Brookyn 99</button>
+                        <button type="button" class="btn btn-info get-GIFs" data-search="psych" data-state="still">Psych</button>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-9">
-                <div class="card giphy-feed">
-                    <div class="card-body main-feed">
-                        <h5 class="card-title">GIF Feed</h5>
-                    </div>
+                <div class="card main-feed">
+                    <h5 class="card-title">GIF Feed</h5>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card giphy-feed">
-                    <div class="card-body favorites-feed">
-                        <h5 class="card-title">Favorites</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">See your saved GIFs here!</h6>
-                    </div>
+                <div class="card favorites-feed">
+                    <h5 class="card-title">Favorites</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">See your saved GIFs here!</h6>
                 </div>
             </div>
         </div>
     </div>
     <footer class="footer">
         <div>
-            See more programs in my portfolio <span><a href="https://hurlyburly.github.io/Bootstrap-Portfolio/portfolio.html">here</span>
+            See more programs in my portfolio
+            <span>
+                <a href="https://hurlyburly.github.io/Bootstrap-Portfolio/portfolio.html">here</span>
         </div>
     </footer>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-    <script
-    src="http://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
