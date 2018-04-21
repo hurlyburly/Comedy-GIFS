@@ -10,6 +10,9 @@ margin-top:2.5%;
 .card{
     margin-left:-30px;
 }
+.favorites-feed{
+    background-color: #f4efd2;
+}
 .form-group{
     margin:5px;
     padding:5px;
@@ -23,7 +26,8 @@ label{
 
 .giphy-feed{
     height:100%;
-    margin-bottom:60px
+    margin-bottom:99%;
+    background-color:#f7d9ea;
 }
 
 .footer {

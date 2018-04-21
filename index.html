@@ -20,18 +20,18 @@
                     <div class="card-body">
                         <form class="form-inline">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Search">
+                                <input type="text" class="form-control search-GIF" id="formGroupExampleInput" placeholder="Search">
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">GIFs</label>
-                                <select class="form-control" id="exampleFormControlSelect1" placeholder="GIFs">
+                                <select class="form-control gif-amount" id="exampleFormControlSelect1" placeholder="GIFs">
                                     <option>5</option>
-                                    <option>10</option>
+                                    <option selected>10</option>
                                     <option>15</option>
                                 </select>
                             </div>
                             <div class="form-group">                            
-                            <button type="submit" class="btn btn-info">Submit</button>
+                            <button type="submit" class="btn btn-info" id="get-GIFs">Submit</button>
                             </div>
                         </form>
                         <br>
@@ -48,14 +48,14 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="card giphy-feed">
-                    <div class="card-body">
+                    <div class="card-body main-feed">
                         <h5 class="card-title">GIF Feed</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card giphy-feed">
-                    <div class="card-body">
+                    <div class="card-body favorites-feed">
                         <h5 class="card-title">Favorites</h5>
                         <h6 class="card-subtitle mb-2 text-muted">See your saved GIFs here!</h6>
                     </div>
@@ -68,14 +68,16 @@
             See more programs in my portfolio <span><a href="https://hurlyburly.github.io/Bootstrap-Portfolio/portfolio.html">here</span>
         </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
-    <script src="assets/javascript/apps.js"></script>
+    <script src="assets/javascript/app.js"></script>
 
 
 </body>
