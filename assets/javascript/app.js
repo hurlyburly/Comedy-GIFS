@@ -27,6 +27,24 @@ $(document).ready(function() {
     //clear gifs on page and buttons created
   });
 
+  $(".gif-button").on("click",function(event){
+    event.preventDefault();
+    var newButton=$(".search-GIF").val();
+    
+    topics.push(newButton);
+    console.log(topics);
+
+      $(".button-area").append(
+    `
+     <h4>${}</h2>
+   
+    
+    </div>`
+    
+   );
+  })
+  
+
   $(".get-GIFs").on("click", function() {
     var search = $(this).data("search");
     var apiKey = "8ZCbydXTYkPNLN7AffE0dj7uiERD5sZZ";
