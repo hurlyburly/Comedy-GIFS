@@ -25,27 +25,40 @@ var topics = ["the office", "parks and recreation", "brooklyn 99", "psych"];
 $(document).ready(function() {
   $("#clear-GIFs").on("click", function(event) {
     //clear gifs on page and buttons created
+    
   });
 
-  $(".gif-button").on("click",function(event){
+  $(".gif-button").on("click", function(event) {
     event.preventDefault();
-    var button=$(".search-GIF").val();
-    
+    var button = $(".search-GIF").val();
+
     topics.push(button);
     console.log(topics);
-    var newButton=topics[topics.length-1];
-      $(".button-area").append(
-    `
+    var newButton = topics[topics.length - 1];
+    $(".button-area").append(
+      `
      <button type="button" class="btn btn-info get-GIFs" data-search=${newButton} data-state="still" >${newButton}</button>
     `
+    );
+    console.log(newButton);
+    console.log(topics);
+  });
+  $(".main-feed").on("click", "img", function() {
+    //Clicking the image will change the src from the still image source to the animated image source or vice versa, depending on the data state.
+    var state = $(this).attr("data-state");
+    //assigning a variable with this format ($) to reduce the amount of "this" in the code and increase readability while also making it clear that this is changing something dynamically
+    var $img = $(this);
 
-   );
-   console.log(newButton);
-   console.log(topics);
-  })
-  
+    if (state == "still") {
+      var animatedImg = $img.attr("data-animated");
+      $img.attr({ src: animatedImg, "data-state": "animate" });
+    } else {
+      var stillImg = $img.attr("data-still");
+      $img.attr({ src: stillImg, "data-state": "still" });
+    }
+  });
 
-  $(".button-area").on("click",".get-GIFs", function() {
+  $(".button-area").on("click", ".get-GIFs", function() {
     var search = $(this).data("search");
     var apiKey = "8ZCbydXTYkPNLN7AffE0dj7uiERD5sZZ";
     var limit = $(".gif-amount").val();
@@ -74,24 +87,8 @@ $(document).ready(function() {
           <img src=${gifStill} data-still=${gifStill} data-animated=${gifAnimated} data-state="still">
           
           </div>`
-          
         );
       }
-      $("img").on("click", function() {
-        //Clicking the image will change the src from the still image source to the animated image source or vice versa, depending on the data state.
-        var state = $(this).attr("data-state");
-        //assigning a variable with this format ($) to reduce the amount of "this" in the code and increase readability while also making it clear that this is changing something dynamically
-        var $img = $(this);
-        
-        if (state == "still") {
-          var animatedImg = $img.attr("data-animated");
-          $img.attr({ "src": animatedImg, "data-state": "animate" });
-          
-        } else {
-          var stillImg = $img.attr("data-still");
-          $img.attr({ "src": stillImg, "data-state": "still" });
-        }
-      });
     });
   });
 });
