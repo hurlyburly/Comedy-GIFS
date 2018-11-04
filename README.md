@@ -8,7 +8,7 @@ Read Me
 
 This website, <https://hurlyburly.github.io/Comedy-GIFS/> , will pull a specified amounts of gifs related to the user search from the GIPHY API.  
 
-The theme is set to comedy shows and movies.  
+The theme is set to comedy shows and movies.  But you can look up anything you feel like. 
 
 **There are buttons prebuilt for some tv shows I love including:**
 + The Office
